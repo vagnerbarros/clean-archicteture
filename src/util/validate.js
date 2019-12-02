@@ -1,21 +1,13 @@
+export default function makeValidate () {
+  return Object.freeze({
+    validateCpf
+  })
 
-module.exports = function isValidCpf(cpf){
-  // todo: 
-  if(cpf.length !== 11){
-    return false;
-  }
-  else{
-    return true;
-  }
-}
-
-module.exports = function isValidCep(cep){
-
-  //todo: 
-  if(cep.length !== 8){
-    return false;
-  }
-  else{
-    return true;
+  function validateCpf (cpf = '') {
+    if (cpf.length === 11) {
+      return true
+    } else {
+      return false
+    }
   }
 }
